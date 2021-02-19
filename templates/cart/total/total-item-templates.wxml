@@ -1,0 +1,14 @@
+<!--templates/cart/total/total-item-templates.wxml-->
+
+<template name="totalItemTemplate">
+	<view class="total-panel">
+		<view class="total-panel-view">
+			<text class="total-num">合计:</text>
+			<view class="total-scoll">
+				<text class="total-count">{{scoll}}</text>
+				<text class="total-company">积分</text>
+			</view>
+			<button class="total-btn" bind:tap="countShop">结算({{count}})</button>
+		</view>
+	</view>
+</template>

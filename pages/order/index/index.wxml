@@ -1,0 +1,30 @@
+<!--pages/order/index/index.wxml-->
+
+<import src="/templates/more/more-item-templates.wxml" />
+<import src="/templates/order/list/status-item-templates.wxml" />
+
+<navigation 
+	title='订单'
+	searchBar="true"
+	keyword="{{keyword}}"
+	show_left="{{false}}"
+	headerHeight="{{90}}"
+	bind:search="searchList"
+	bind:keywordChange="keywordChange"
+	placeholder="根据客户姓名或手机号码搜索"
+/>
+<view class="order-page">
+
+	<view class="swiper-tab" style="top:{{(statusBarHeight + 90)*2}}rpx">
+		<block wx:for="{{swipertab}}" wx:key="sptab">
+			<view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">
+				<text>{{item.name}}</text>
+			</view>
+		</block>
+	</view>
+
+	<template is="statusItemTemplate" data="{{currtab, deviceH, swiperHeight, statusBarHeight, list, status }}" />
+
+	<template is="moreItemTemplate" data="{{ isLogin }}" />
+
+</view>

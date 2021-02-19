@@ -1,0 +1,38 @@
+/* templates/list/btn/btn-cart-templates.wxss */
+
+.add-cart-btn{
+  width: 100%;
+  bottom: 40rpx;
+  position: fixed;
+}
+
+.add-cart-btn .add-cart-view{
+  display: flex;
+  justify-content: center;
+}
+
+.add-cart-btn .add-cart-view button{
+  margin: 0;
+}
+
+.cart-confirm {
+  height: 80rpx;
+  width: 336rpx !important;
+  color: #333;
+  font-size: 32rpx;
+  border-radius: 0;
+  border-top-right-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  background-color: #FFD7E0;
+}
+
+.cart-add {
+  height: 80rpx;
+  width: 332rpx !important;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 0;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  background-color: #FD4C72;
+}

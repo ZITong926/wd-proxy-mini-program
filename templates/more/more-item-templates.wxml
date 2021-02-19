@@ -1,0 +1,5 @@
+<!--templates/more/index.wxml-->
+
+<template name="moreItemTemplate">
+  <view wx:if="{{!isLogin}}" class="login-more" bindtap="goLoginPage">想了解更多、请点击登录!</view>
+</template>

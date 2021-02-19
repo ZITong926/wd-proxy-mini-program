@@ -1,0 +1,109 @@
+/* templates/cart/address/address-item-templates.wxss */
+
+.address-item {
+  margin: 20rpx;
+}
+
+.address-item .no-address-item {
+  display: flex;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.address-item .no-address-item .address-icon-left {
+  width: 48rpx;
+  height: 54rpx;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.address-item .no-address-item .address-title {
+  height: 44rpx;
+  line-height: 44rpx;
+  margin: 40rpx 20rpx 0;
+  width: 162rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #333;
+}
+
+.address-item .no-address-item .address-icon-right {
+  width: 16rpx;
+  height: 24rpx;
+  top: 50rpx;
+  right: 20rpx;
+  position: absolute;
+}
+
+.address-item .has-address-item {
+  display: flex;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.address-item .has-address-item .address-icon-left {
+  width: 48rpx;
+  height: 54.56rpx;
+  margin-top: 76rpx;
+  margin-bottom: 68rpx;
+}
+
+.address-item .has-address-item .address-title {
+  height: 44rpx;
+  line-height: 44rpx;
+  margin: 40rpx 20rpx 0;
+  width: 162rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #333;
+}
+
+.address-item .has-address-item .address-icon-right {
+  width: 16rpx;
+  height: 24rpx;
+  top: 92rpx;
+  right: 20rpx;
+  position: absolute;
+}
+
+.address-item .has-address-item .address-info {
+  margin-top: 36rpx;
+  margin-left: 20rpx;
+}
+
+.address-item .has-address-item .address-info .name-tel .name {
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #333;
+  line-height: 44rpx;
+}
+
+.address-item .has-address-item .address-info .name-tel .tel {
+  height: 38rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  line-height: 44rpx;
+  padding-left: 8rpx;
+}
+
+.address-item .has-address-item .address-info .real-address {
+  width: 566rpx;
+  height: 68rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  flex-wrap: wrap;
+  line-height: 34rpx;
+  margin-top: 10rpx;
+}

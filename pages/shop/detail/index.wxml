@@ -1,0 +1,24 @@
+<!--pages/shop/detail/index.wxml-->
+<import src="/templates/list/btn/btn-cart-templates.wxml" />
+<import src="/templates/list/cart/add-cart-templates.wxml" />
+<import src="/templates/list/kind/cart-select-templates.wxml" />
+<import src="/templates/list/detail/detail-head-template.wxml" />
+
+
+<navigation title='商品详情' show_left='{{true}}' />
+
+<view class="goods-detail">
+
+	<scroll-view scroll-y="true">
+
+		<template is="detailTemplate" data="{{ data, specsName }}" />
+
+		<template is="typingTemplate" data="{{ properties: data.properties, specIds }}" />
+
+		<template is="addCartTemplate" data="{{ count }}" />
+
+	</scroll-view>
+
+	<template is="btnAddTemplate" />
+
+</view>

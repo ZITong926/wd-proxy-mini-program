@@ -1,0 +1,61 @@
+<!--templates/order/list/status-item-templates.wxml-->
+
+<template name="statusItemTemplate">
+	<view class="order-status-view">
+		<swiper style="height: {{ 2* (deviceH-(statusBarHeight + 90 + 42))}}rpx" current="{{0}}" class="swiper-box" duration="300" bindchange="tabChange">
+			<swiper-item wx:for="{{4}}" wx:key="*this">
+				<scroll-view id="scoll-view" scroll-y="true" class="staus-box" bindscrolltoupper="onRefreshTo" bindscrolltolower="onReachBottom" style="height: {{ 2* (deviceH - (statusBarHeight + 90 + 42)) }}rpx">
+					<!-- <view style="height: {{ 2* (deviceH - (statusBarHeight + 90 + 42)) }}rpx" id="scoll-view" class="staus-box" > -->
+					<view class="status-box-item" wx:for="{{list}}" wx:key="id">
+						<view class="div-order-no">
+							<view class="div-order">
+								<text class="div-order-one">订单编号:</text>
+								<text class="div-order-two">{{item.orderNo}}</text>
+								<button data-id="{{item.orderNo}}" catchtap="copyOrder">复制</button>
+							</view>
+							<text class="status-box-order">{{ status[item.status]}}</text>
+						</view>
+
+						<view class="status-box-item-head">
+							<image src="{{item.vendorAvatar}}" />
+							<text class="status-box-item-title">{{item.vendorName}}</text>
+						</view>
+						<view bind:tap="onJumpOrderDetail" id="{{item.id}}" class="order-info" wx:for="{{item.items}}" wx:for-item="items" wx:key="id">
+							<view class="order-info-status">
+								<image src="{{items.productImage}}" />
+
+								<view class="order-info-title">
+									<text class="title">{{items.productName}}</text>
+									<text class="type">{{items.specName}}</text>
+								</view>
+
+								<view class="order-info-scoll">
+									<text class="scoll">{{items.proxyPrice}}<text class="title">积分</text></text>
+									<text class="num">x{{items.count}}</text>
+								</view>
+							</view>
+						</view>
+
+						<view class="order-total">
+							<text class="total-shop">共{{item.productCount}}件商品</text>
+							<text class="total-num-title">
+								<text class="total">合计</text>
+							<text class="scoll-num">{{item.totalAmount}}</text>
+							<text class="scoll">积分</text>
+							</text>
+						</view>
+
+
+						<view class="order-info-footer">
+							<!-- <button id="{{item.id}}" catch:tap="cancalOrder" class="btn btn-cancel" wx:if="{{ item.status == 1}}">取消订单</button> -->
+							<button id="{{item.id}}" class="btn btn-express" catch:tap="getLogis" wx:if="{{ item.status == 3}}">物流查询</button>
+							<button class="btn btn-pay" catch:tap="onJumpPayOrder" id="{{item.id}}" wx:if="{{ item.status == 1}}">确认支付积分</button>
+						</view>
+
+					</view>
+					<!-- </view> -->
+				</scroll-view>
+			</swiper-item>
+		</swiper>
+	</view>
+</template>

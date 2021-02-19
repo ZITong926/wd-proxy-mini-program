@@ -1,0 +1,66 @@
+<!--pages/shop/kind/index.wxml-->
+
+<navigation title='分类列表' show_left='true' />
+
+<view class="kind-shop-list">
+
+	<view class="containers">
+		<!--左侧栏-->
+		<scroll-view 
+			scroll-y="true" 
+			class='scroll_left' 
+			style="margin-top: {{ 2*(statusBarHeight + 50)}}rpx; height:{{2 * (winHeight- statusBarHeight - 50)}}rpx;"
+		>
+			<view class="nav_left">
+				<block wx:key="id" wx:for="{{list}}" wx:for-index="index">
+					<view
+						data-id="{{item.id}}"
+						data-index="{{index}}"
+						bindtap="switchRightTab" 
+						class="nav_left_items {{curNav == item.id ? 'active' : ''}}"
+					>
+						<view class="{{curNav == item.id ? 'isSelect' : 'noSelect'}}" />
+						<view class="item-name {{curNav == item.id ? 'item-name-select' : ''}}">{{item.name}}</view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+		<!--右侧栏-->
+		<!--如果使用 scroll-into-view 属性，必须设置 scroll-view 的高度，且最好是动态获取屏幕高度 -->
+		<!-- scroll-into-view 属性 值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素 -->
+		<scroll-view 
+			scroll-y="true" 
+			class="scroll_right" 
+			scroll-with-animation="true" 
+			scroll-into-view="{{scrollTopId}}" 
+			style="height:{{2 * (winHeight- statusBarHeight - 50)}}rpx;margin-top: {{ 2*(statusBarHeight + 50)}}rpx; padding-bottom: 160rpx"
+		>
+			<view class="nav_right">
+				<view class='mink' wx:for="{{list[index].children}}" wx:key="id" bindscroll="scrollTop">
+					<view class="middle-title">
+						<text class='minl' id="kind_{{item.id}}">{{item.name}}</text>
+					</view>
+						<view class="kind-children">
+							<view 
+								wx:key="id" 
+								wx:for-item="items"
+								data-id="{{ items.id}}"
+								bind:tap="selectedKind"
+								wx:for="{{item.children}}" 
+							  class='view-items-item-view {{ categoryId == items.id ? "active":"" }}'
+							>
+							{{items.name}}
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</scroll-view>
+
+		<view class="kind-btn">
+			<button class="ok" bind:tap="backToShop">确认</button>
+		</view>
+
+	</view>
+
+</view>

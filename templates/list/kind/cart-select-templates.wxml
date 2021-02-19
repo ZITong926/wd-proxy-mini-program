@@ -1,0 +1,24 @@
+<template name="typingTemplate">
+
+	<view class="cart-number" wx:for="{{ properties }}" wx:key="id" wx:for-index="idx">
+
+		<text class="cart-number-title">{{item.propertyName}}</text>
+
+		<view class="cart-number-btn">
+			<view 
+				wx:key="id"
+				wx:for-item="items"
+				data-index="{{ idx }}" 
+				data-id="{{items.id}}"
+				bind:tap="changeChoose" 
+				wx:for="{{ item.specs }}" 
+				data-propertyValue="{{ items.propertyValue }}"
+				class="cart-number-btn-item {{specIds[idx] && specIds[idx].id == items.id ? 'hight-color': ''}}" 
+			>
+      	{{items.propertyValue}}
+			</view>
+		</view>
+
+	</view>
+
+</template>

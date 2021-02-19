@@ -1,0 +1,69 @@
+.home-page-join {
+  height: 140rpx;
+  display: flex;
+  border-radius: 10rpx;
+  background: #fff;
+  position: relative;
+  align-items: center;
+  margin: 8px 10px 0px 10px;
+}
+
+.home-page-join-shop-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  margin-left: 22rpx;
+}
+
+.home-page-join-description {
+  display: flex;
+}
+
+.home-page-join-title {
+  /* width: 119px; */
+  height: 44rpx;
+  display: block;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 44rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.home-page-join-invitation {
+  height: 34rpx;
+  margin-top: 8rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #FD4C72;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.home-page-join-action {
+  top: 46rpx;
+  right: 32rpx;
+  display: flex;
+  position: absolute;
+}
+
+.btn{
+  height: 48rpx;
+  display: flex;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+  align-items: center;
+  padding: 0 !important;
+  justify-content: center;
+  width: 140rpx !important;
+  margin-right: 8rpx !important;
+}
+
+.br{
+  border:2rpx solid #E5E5E5;
+}
+
+.bg{
+  color: #fff;
+  background:#FD4C72;
+}

@@ -1,0 +1,74 @@
+/* templates/scoll/item/scoll-item-templates.wxss */
+
+.scoll-item {
+  width: 100%;
+  height: 130rpx;
+  margin-top: 20rpx;
+}
+
+.scoll-item-view {
+  height: 130rpx;
+  display: flex;
+  position: relative;
+  background: #fff;
+  margin-bottom: 4rpx;
+}
+
+.scoll-item-left {
+  margin-top: 28rpx;
+  margin-left: 40rpx;
+}
+
+.scoll-item-right {
+  top: 28rpx;
+  right: 40rpx;
+  position: absolute;
+}
+
+.scoll-item-left text,
+.scoll-item-right text {
+  display: block;
+}
+
+.scoll-item-left .up {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 40rpx;
+}
+
+.scoll-item-left .down {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  line-height: 34rpx;
+}
+
+.scoll-item-right .up {
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: bold;
+  color: #FD4C72;
+  line-height: 44rpx;
+}
+
+.scoll-item-right .down {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  text-align: right;
+  line-height: 34rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

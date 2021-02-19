@@ -1,0 +1,57 @@
+.home-page-item{
+  height: 140rpx;
+  display: flex;
+  background: #fff;
+  position: relative;
+  align-items: center;
+  border-radius: 10rpx;
+  margin: 16px 20rpx 0 20rpx;
+}
+
+.home-page-item-shop-icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  margin-left: 22rpx;
+}
+
+.home-page-item-description{
+  display: flex;
+}
+
+.home-page-item-title{
+  /* width: 119px; */
+  height: 44rpx;
+  display: block;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 44rpx;
+  font-family:PingFangSC-Medium,PingFang SC;
+}
+
+.home-page-item-integral{
+  height: 34rpx;
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 34rpx;
+}
+
+.home-page-item-details{
+  height: 34rpx;
+  margin-top: 6rpx;
+  font-weight: bold;
+  margin-left: 8rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #FD4C72;
+}
+
+.home-page-item-right-icon{
+  top: 58rpx;
+  width: 16rpx;
+  right: 20rpx;
+  height: 24rpx;
+  position: absolute;
+}

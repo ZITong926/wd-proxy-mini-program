@@ -1,0 +1,62 @@
+/* templates/cart/post/post-address-templates.wxss */
+.post-address-item {
+  margin: 20rpx;
+}
+
+.post-address-item .has-post-address-item {
+  display: flex;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: relative;
+  height: 100rpx;
+}
+
+.post-address-item .has-post-address-item .post-address-icon-left {
+  width: 48rpx;
+  height: 38rpx;
+  margin-top: 31rpx;
+}
+
+
+.post-address-item .has-post-address-item .post-address-icon-right {
+  width: 16rpx;
+  height: 24rpx;
+  top: 40rpx;
+  right: 20rpx;
+  position: absolute;
+}
+
+.post-address-item .has-post-address-item .post-address-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+  
+}
+
+.post-address-item .has-post-address-item .post-address-info .post-real-address {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #0091FF;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.post-address-item .has-post-address-item .post-address-info  .wuliu{
+  font-size: 28rpx;
+  color: #666;
+  font-weight: 400;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+/* .post-address-item .has-post-address-item .post-address-info .post-address-time {
+  width: 554rpx;
+  height: 28rpx;
+  margin-top: 8rpx;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #b7b7b7;
+  font-family: PingFangSC-Regular, PingFang SC;
+} */

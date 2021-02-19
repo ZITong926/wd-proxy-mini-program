@@ -1,0 +1,9 @@
+/* pages/shop/index/index.wxss */
+@import '/templates/more/more-item-templates.wxss';
+@import '/templates/shop/item/shop-item-templates.wxss';
+@import '/templates/shop/join/shop-join-templates.wxss';
+
+page{
+  height: 100%;
+  background-color: #F5F5F5;
+}

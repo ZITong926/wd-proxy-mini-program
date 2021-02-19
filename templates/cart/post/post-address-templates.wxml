@@ -1,0 +1,18 @@
+<!--templates/cart/post/post-address-templates.wxml-->
+
+<template name="postAddressTemplate">
+	<view class="post-address-item" id="{{list.id}}" bind:tap="getLogis">
+
+		<view class="has-post-address-item">
+			<image class="post-address-icon-left" src="/images/list/wuliu.png" />
+
+			<view class="post-address-info">
+				<view class="post-real-address">快递发货</view>
+				<text class="wuliu">查看物流</text>
+			</view>
+			<image class="post-address-icon-right" src="/images/mine/arrow.png" />
+		</view>
+
+	</view>
+
+</template>

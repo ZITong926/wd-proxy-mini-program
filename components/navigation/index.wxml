@@ -1,0 +1,35 @@
+<!-- 自定义头部实现颜色渐变 -->
+<wxs src="index.wxs" module="nav"></wxs>
+<view style="padding-top:{{content_offset ? small_title ? (bar_Height + headerHeight + 18)*2: (bar_Height + headerHeight)*2 : 0}}rpx;">
+	<view 
+		class='status-bar' 
+		style="background-color:{{background_color}}; {{nav.linearGradient(linear_gradient, direction, color_stops)}}; height: {{content_offset ? small_title ? (bar_Height + headerHeight + 18)*2 : (bar_Height + headerHeight)*2 : 0}}rpx;">
+
+		<!-- <view 
+			class="tabar {{my_class ? 'tabar2':''}}" 
+		> -->
+		<view class='goBack' bindtap='goBack' hidden='{{!show_left}}'>
+			<image class="left-icon" src='/images/list/back.png' />
+		</view>
+		<view class="bar-content" style="height: 100%">
+			<text class="head-text" style="color:{{title_color}};">{{title}}</text>
+
+			<text class="small-title" hidden="{{!small_title}}">{{small_title}}</text>
+
+			<view class="list-page-search" hidden="{{!searchBar}}">
+				<input 
+					value="{{keyword}}" 
+					bindconfirm="search"
+					confirm-type="search" 
+					bindinput="inputOnchange"
+					class="list-page-search-input" 
+					placeholder="{{ placeholder }}" 
+					placeholder-class="search-input-icon" 
+				/>
+			</view>
+		</view>
+
+		<!-- </view> -->
+
+	</view>
+</view>

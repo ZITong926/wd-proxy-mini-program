@@ -1,0 +1,77 @@
+/* templates/scoll/head/head-scoll-templates.wxml.wxss */
+
+.head-scoll {
+  height: 194rpx;
+  display: flex;
+  background: #fff;
+}
+
+.head-left{
+  width: 236rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.head-left .up{
+  color: #999;
+  height: 40rpx;
+  display: block;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.head-left .down {
+  color: #333;
+  height:84rpx;
+  display: block;
+  font-size: 40rpx;
+  line-height: 84rpx;
+  font-weight: bolder;
+  padding-top: 4rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.head-scoll .scoll-vertical{
+  width: 4rpx;
+  height: 124rpx;
+  background: #eee;
+  margin-top: 36rpx;
+}
+
+
+.head-right .head-up, .head-right .head-down{
+  height: 96rpx;
+  line-height: 96rpx;
+  margin-left: 166rpx;
+}
+
+.head-right .head-up .title, .head-right .head-down .title{
+  width: 140rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #999;
+  font-size: 28rpx;
+  font-weight: bold;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.head-right .head-up .scoll, .head-right .head-down .scoll{
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 16rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.head-right .scoll-horizontal{
+  height: 4rpx;
+  width: 456rpx;
+  margin-left: 16rpx;
+  background: #eee;
+}

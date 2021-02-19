@@ -1,0 +1,10 @@
+/* pages/scoll/index/index.wxss */
+
+@import '/templates/scoll/item/scoll-item-templates.wxss';
+@import '/templates/scoll/head/head-scoll-templates.wxml.wxss';
+
+page{
+  height: 100%;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}

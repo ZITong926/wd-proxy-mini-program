@@ -1,0 +1,10 @@
+<!--pages/login/intercept/index.wxml-->
+
+<view class="intercept">
+
+  <view class="inter-img">
+    <image src="../../../images/list/icon.png" />
+  </view>
+
+  <com-loading loading="true" />
+</view>

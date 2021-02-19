@@ -1,0 +1,26 @@
+<!--templates/order/total/total-order-templates.wxml-->
+
+<template name="detailTotalTemplate">
+	<view class="total-order-view">
+		<view class="total-order-discount">
+			<text>优惠积分</text>
+			<text>{{list.discountAmount}}</text>
+		</view>
+		<view class="total-order-other">
+			<text>其他费用</text>
+			<text>{{list.otherAmount}}</text>
+		</view>
+	</view>
+
+	<view class="total-order-pay">
+		<text>总计支付</text>
+		<text>{{count}}</text>
+	</view>
+
+	<view class="total-pos">
+		<view class="total-order-btn" wx:if="{{list.status == 2 || list.status == 1}}}">
+			<button id="{{list.id}}" class="cancel" bind:tap="cancalOrder" wx:if="{{list.status == 1}}">取消</button>
+			<button id="{{list.id}}" class="confirm" bind:tap="onJumpPayOrder" wx:if="{{list.status == 1}}">确认支付</button>
+		</view>
+	</view>
+</template>

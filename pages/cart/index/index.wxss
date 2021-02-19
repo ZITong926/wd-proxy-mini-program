@@ -1,0 +1,22 @@
+/* pages/cart/index/index.wxss */
+
+@import '/templates/more/more-item-templates.wxss';
+@import '/templates/cart/pop/pop-cart-templates.wxss';
+@import '/templates/cart/list/list-cart-templates.wxss';
+@import '/templates/cart/total/total-item-templates.wxss';
+
+page {
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.cart-list{
+  margin: 0 20rpx 0 20rpx;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,14 @@
+<!--pages/shop/index/index.wxml-->
+
+<import src="/templates/more/more-item-templates.wxml" />
+<import src="/templates/shop/item/shop-item-templates.wxml" />
+
+<navigation title='首页' show_left='{{false}}' />
+
+<view class="home-page">
+
+	<template is="shopItemTemplate" data="{{list}}" />
+
+	<template is="moreItemTemplate" data="{{ isLogin }}" />
+
+</view>

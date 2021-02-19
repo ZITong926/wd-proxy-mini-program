@@ -1,0 +1,19 @@
+<template name="shopJoinTemplate">
+	<view class="home-page-join">
+		<image class="home-page-join-shop-icon" src="/images/tab/circle.png" />
+
+		<view class="home-page-join-text">
+			<text class="home-page-join-title">余猪猪韩代1号店</text>
+			<text class="home-page-join-invitation">加入邀请</text>
+		</view>
+
+		<view class="home-page-join-action">
+			<button class="btn br">
+				<text class="reject">拒绝</text>
+			</button>
+			<button class="btn bg">
+				<text class="agree">同意</text>
+			</button>
+		</view>
+	</view>
+</template>

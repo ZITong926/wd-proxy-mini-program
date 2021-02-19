@@ -1,0 +1,248 @@
+/* templates/order/list/status-item-templates.wxss */
+
+.order-status-view {
+  margin-top: 84rpx;
+}
+
+/* 
+.staus-box{
+  overflow-y: scroll;
+} */
+
+.div-order-no {
+  padding: 20rpx 20rpx 28rpx 20rpx;
+  position: relative;
+}
+
+.div-order-one, .div-order-two{
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  height: 34rpx;
+  line-height: 34rpx;
+  color: #333333;
+}
+
+.div-order-two{
+  padding-left: 8rpx;
+}
+
+.div-order {
+  display: flex;
+  height: 50rpx;
+  border-bottom: 2rpx solid #e7e7e7;
+}
+
+.div-order button {
+  height: 30rpx;
+  border-radius: 10rpx;
+  width: 72rpx !important;
+  padding: 0;
+  font-size: 20rpx;
+  border: 2rpx solid #ccc;
+}
+
+.staus-box .status-box-item {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.status-box-item-head {
+  display: flex;
+  position: relative;
+  margin-bottom: 8rpx;
+}
+
+.status-box-item-head image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+  margin-right: 8rpx;
+}
+
+.status-box-item-title {
+  color: #333;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 44rpx;
+  display: block;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.status-box-order {
+  top: 20rpx;
+  right: 20rpx;
+  position: absolute;
+  text-align: right;
+  height: 34rpx;
+  font-size: 24rpx;
+  display: block;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #FD4C72;
+}
+
+.order-info {
+  position: relative;
+}
+
+.order-info-status {
+  display: flex;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.order-info-status image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 18rpx;
+  margin-right: 28rpx;
+}
+
+.order-info-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-info-title .title {
+  width: 414rpx;
+  height: 68rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  flex-wrap: wrap;
+  display: block;
+  line-height: 34rpx;
+}
+
+.order-info-title .type {
+  width: 414rpx;
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  padding-top: 4rpx;
+  line-height: 28rpx;
+}
+
+.order-info-scoll {
+  display: flex;
+  right: 20rpx;
+  top: 18rpx;
+  position: absolute;
+  flex-direction: column;
+}
+
+.order-info-scoll .scoll {
+  height: 44rpxpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 44rpx;
+}
+
+.order-info-scoll .scoll .title {
+  width: 40rpx;
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 28rpx;
+  padding-left: 4rpx;
+}
+
+.order-info-scoll .num {
+  text-align: right;
+}
+
+.order-total {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.order-total .total-shop {
+  height: 34rpx;
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 400;
+  line-height: 34rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.total-num-title .total {
+  width: 48rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 34rpx;
+  padding-left: 16rpx;
+}
+
+.total-num-title .scoll-num {
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 44px;
+}
+
+.total-num-title .scoll {
+  width: 40rpx;
+  height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 28rpx;
+  padding-left: 4rpx;
+}
+
+.order-info-footer {
+  height: 82rpx;
+  margin: 0 20rpx;
+  position: relative;
+  border-top: 2rpx solid #f5f5f5;
+}
+
+.order-info-footer .btn {
+  height: 40rpx;
+  padding: 0 !important;
+  width: 136rpx !important;
+  border-radius: 10rpx;
+  border: 2rpx solid #eee;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 14rpx;
+  right: 20rpx;
+  font-weight: 400;
+  position: absolute;
+}
+
+.order-info-footer .btn-cancel {
+  color: #999;
+}
+
+.order-info-footer .btn-express,
+.order-info-footer .btn-pay {
+  color: #fff;
+  background: #FD4C72;
+}
+
+.order-info-footer .btn-pay {
+  color: #fff;
+  background: #FD4C72;
+  width: 184rpx !important;
+}

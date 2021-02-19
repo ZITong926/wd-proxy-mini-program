@@ -1,0 +1,17 @@
+<template name="shopItemTemplate">
+
+	<view class="home-page-item" catchtap="onJumpShopList" data-vendorid="{{item.vendorId}}" wx:for="{{list}}" wx:key="customerId">
+
+		<image class="home-page-item-shop-icon" src="{{item.vendorAvatar}}" />
+    <view class="home-page-item-text">
+      <text class="home-page-item-title">{{item.vendorNickName}}</text>
+      <view class="home-page-item-description">
+        <text class="home-page-item-integral">剩余{{item.scoreBalance}}积分</text>
+        <text class="home-page-item-details" catchtap="onJumpScoll" data-id="{{item.vendorId}}">使用详情</text>
+      </view>
+    </view>
+
+    <image class="home-page-item-right-icon" src="/images/tab/right.png" />
+	</view>
+
+</template>

@@ -1,0 +1,15 @@
+/* pages/shop/detail/index.wxss */
+
+@import '/templates/list/btn/btn-cart-templates.wxss';
+@import '/templates/list/cart/add-cart-templates.wxss';
+@import '/templates/list/kind/cart-select-templates.wxss';
+@import '/templates/list/detail/detail-head-template.wxss';
+
+page {
+  height: 100%;
+  background-color: #fff;
+}
+
+.goods-detail{
+  position: relative;
+}

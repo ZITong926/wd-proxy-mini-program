@@ -1,0 +1,97 @@
+/* pages/login/register/index.wxss */
+
+page {
+  height: 100%;
+  background-color: #fff;
+}
+
+.register-page .re-back {
+  width: 44rpx;
+  height: 44rpx;
+  top: 68rpx;
+  left: 40rpx;
+  position: fixed;
+  background: #000;
+}
+
+
+.register-page .register-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register-page .register-content .input-code {
+  width: 200rpx;
+  height: 56rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  line-height: 56rpx;
+  margin-top: 246rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.register-page .register-content .show-phone {
+  width: 450rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  display: block;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  margin: 28rpx;
+  color: #999;
+  line-height: 44rpx;
+}
+
+.register-page .register-content .time {
+  width: 66rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ccc;
+  line-height: 34rpx;
+  margin-top: 28rpx;
+}
+
+.register-page .register-content .re-send {
+  width: 148rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  padding: 0 !important;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 18rpx;
+}
+
+.register-page .register-content .re-send text {
+  height: 34rpx;
+  line-break: 34rpx;
+}
+
+
+.register-verify .content {
+  display: flex;
+  margin-top: 146rpx;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.register-verify .content .iptbox {
+  width: 140rpx;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2rpx solid #979797;
+}
+
+.register-verify .ipt {
+  width: 0;
+  height: 0;
+}

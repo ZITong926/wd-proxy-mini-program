@@ -1,0 +1,21 @@
+<!--pages/mine/index/index.wxml-->
+
+<import src="/templates/more/more-item-templates.wxml" />
+
+<navigation title='我的' show_left="{{false}}" />
+
+<view class="mine-page">
+
+	<view class="mine-page-icon">
+		<image class="mine-icon" src="{{ avatar ? avatar : '/images/mine/icon.png' }}" />
+		<text wx:if="{{isLogin}}" class="mine-text">{{ showNumber }}</text>
+		<template is="moreItemTemplate" data="{{ isLogin }}" />
+	</view>
+
+	<view class="mine-page-item" bindtap="goService">
+		<image class="mine-service" src="/images/mine/service.png" />
+		<text class="mine-title">联系客服</text>
+		<image class="mine-arrow" src="/images/mine/arrow.png" />
+	</view>
+
+</view>

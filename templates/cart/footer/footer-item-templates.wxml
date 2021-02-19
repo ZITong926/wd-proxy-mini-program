@@ -1,0 +1,16 @@
+<!--templates/cart/footer/footer-item-templates.wxml-->
+<template name="addOrderTemplate">
+
+	<view class="add-order-footer">
+		<view class="footer-panel-view">
+      <text class="total-shop-footer">共{{count}}件商品，</text>
+			<text class="footer-num">合计:</text>
+			<view class="footer-scoll">
+				<text class="footer-count">{{total}}</text>
+				<text class="footer-company">积分</text>
+			</view>
+			<button class="footer-btn" bind:tap="submitOrder">提交订单</button>
+		</view>
+	</view>
+
+</template>

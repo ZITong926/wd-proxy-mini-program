@@ -1,0 +1,45 @@
+/* pages/order/index/index.wxss */
+
+@import '/templates/more/more-item-templates.wxss';
+@import '/templates/list/serch/serch-bar-templates.wxss';
+@import '/templates/order/list/status-item-templates.wxss';
+
+page {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.order-page .swiper-tab {
+  box-sizing: border-box;
+  height: 84rpx;
+  line-height: 84rpx;
+  background: #fff;
+  color: #999;
+  /* top: 224rpx; */
+  z-index: 1;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40rpx;
+}
+
+.swiper-tab-list {
+  flex: 1;
+  height: 84rpx;
+  text-align: center;
+}
+
+.swiper-tab-list text {
+  height: 40rpx !important;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.on {
+  border-bottom: 4rpx solid #FD4C72;
+  color: #FD4C72;
+}

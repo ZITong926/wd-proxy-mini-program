@@ -1,0 +1,31 @@
+<template name="typeSelectTemplate">
+
+	<view 
+		data-name="{{name}}"
+		bindtap="onJumpChoose" 
+		class="type-select-view" 
+		data-vendorid="{{vendorId}}" 
+	>
+		<view wx:if="{{ name == 'brand' }}" class="pa-f">
+			<image 
+				class="type-select-view-icon" 
+				src="{{ id ? src_active : src }}"
+				style="margin-left: {{ id ? '40rpx': '100rpx' }}" 
+			/>
+			<text class="type-title-on" wx:if="{{ id }}">{{ brandObj.cnName }}/{{brandObj.info}}</text>
+			<text class="type-title" wx:else>{{ text }}</text>
+			<image class="type-del" wx:if="{{ id }}" src="/images/list/del.png" data-name="{{name}}" catch:tap="delInfo" />
+		</view>
+		<view wx:else class="pa-f">
+			<image 
+				class="type-select-view-icon" 
+				src="{{ id ? src_active : src }}"
+				style="margin-left: {{ id ? '40rpx': '100rpx' }}" 
+			/>
+			<text class="type-title-on" wx:if="{{ id }}">{{ categoryObj.level1 }} >{{categoryObj.level2}}>{{categoryObj.level3}}</text>
+			<text class="type-title" wx:else>{{ text }}</text>
+			<image class="type-del" wx:if="{{ id }}" src="/images/list/del.png" data-name="{{name}}" catch:tap="delInfo" />
+		</view>
+	</view>
+
+</template>

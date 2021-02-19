@@ -1,0 +1,62 @@
+/* templates/order/total/total-order-templates.wxss */
+
+.total-order-view {
+  color: #999;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+  margin: 40rpx 40rpx 0 40rpx;
+  border-bottom: 8rpx solid #eee;
+}
+
+.total-order-view .total-order-discount {
+  margin-bottom: 8rpx;
+}
+
+.total-order-view .total-order-discount,
+.total-order-view .total-order-other,
+.total-order-pay {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-order-pay {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 24rpx 40rpx 8rpx 40rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+
+.total-pos{
+  display: flex;
+  justify-content: center;
+}
+
+.total-order-btn {
+  left: 40rpx;
+  right: 40rpx;
+  bottom: 40rpx;
+  display: flex;
+  position: fixed;
+}
+
+.total-order-btn .cancel,
+.total-order-btn .confirm {
+  height: 80rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  width: 100% !important;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.total-order-btn .cancel {
+  background: #ccc;
+}
+
+.total-order-btn .confirm {
+  color: #fff;
+  margin-left: 12rpx;
+  background: #FD4C72;
+}

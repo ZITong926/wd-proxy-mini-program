@@ -1,0 +1,32 @@
+<template name="goodsListTemplate">
+
+	<scroll-view 
+		scroll-y="true" 
+		bindscrolltoupper="onRefreshTo"
+		bindscrolltolower="onReachBottom" 
+		class="goods-list" style="height: {{ (deviceH - statusBarHeight - 90 - 30 - 10)*2 }}rpx"
+	>
+
+		<view class="goods-wrapper" catchtap="onJumpShopDetail" wx:for="{{list}}" data-id="{{item.id}}" wx:key="id">
+			<view class="goods-list-view">
+				<image class="goods-list-view-icon" src="{{item.image}}" />
+
+				<view class="goods-list-view-content">
+					<text class="goods-list-view-title">{{item.name}}</text>
+
+					<view class="goods-list-view-action">
+						<button class="goods-btn goods-left" data-id="{{item.id}}" data-name="cart" catchtap="chooseProperty">
+							<text class="goods-text add-text">加入购物车</text>
+						</button>
+						<button class="goods-btn goods-right" data-id="{{item.id}}" data-name="order" catch:tap="chooseProperty">
+							<text class="goods-text push-text">立即下单</text>
+						</button>
+					</view>
+				</view>
+
+			</view>
+		</view>
+	</scroll-view>
+	<!-- </view> -->
+
+</template>

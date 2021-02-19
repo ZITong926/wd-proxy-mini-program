@@ -1,0 +1,26 @@
+<!--pages/login/index/index.wxml-->
+
+<view class="login-page">
+
+	<image class="icon" src="/images/list/icon.png" />
+
+	<text class="icon-title">一站式服务 就用WD掌柜</text>
+
+	<view class="phone-number">
+
+		<view class="phone-number-view">
+			<image class="icon-p" src="/images/list/phone.png" />
+			<text class="pre-num">+86</text>
+			<input value="{{ mobile }}" bindinput="bindKeyInput" auto-focus placeholder-class="p-place" class="tel" type="number" maxlength="11" placeholder="输入手机号立即绑定" />
+		</view>
+
+	</view>
+
+	<button bindtap="onJumpRegister" style="background: {{ disabled ? '#FEA3B7':'#FD4C72' }}" class="pre-btn">绑定手机</button>
+
+	<view class="layer">
+		<text class="bind-phone">点击绑定手机，即表示已阅读并同意</text>
+		<text class="private">《法律条款及隐私政策》</text>
+	</view>
+
+</view>

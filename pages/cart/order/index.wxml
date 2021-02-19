@@ -1,0 +1,17 @@
+<!--pages/cart/order/index.wxml-->
+
+<import src="/templates/cart/order/order-item-templates.wxml" />
+<import src="/templates/cart/footer/footer-item-templates.wxml" />
+<import src="/templates/cart/address/address-item-templates.wxml" />
+
+<navigation title='确认订单' show_left='true' />
+
+<view class="cart-order">
+
+	<template is="addressItemTemplate" data="{{ add_address, addressInfo, icon: true }}" />
+
+	<template is="cartOrderTemplate" data="{{ list, show, shop, specName, remark, name, remarkVisible: true }}" />
+
+	<template is="addOrderTemplate" data="{{ count: list.count, total }}" />
+
+</view>

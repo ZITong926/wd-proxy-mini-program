@@ -1,0 +1,217 @@
+/* pages/shop/kind/index.wxss */
+.containers {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*左侧栏主盒子*/
+.nav_left {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 162rpx;
+  text-align: center;
+  background: #f5f5f5;
+  display: inline-block;
+}
+
+.isSelect {
+  height: 96rpx;
+  width: 8rpx;
+  margin-left: 16rpx;
+  background: #FD4C72;
+}
+
+.item-name {
+  width: 162rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f7;
+}
+
+.item-name-select {
+  width: 98%;
+  height: 96rpx;
+  background: #fff;
+  font-weight: bold;
+  color: #ed1000;
+}
+
+/*左侧栏list的item*/
+.nav_left .nav_left_items {
+  color: #999;
+  display: flex;
+  width: 162rpx;
+  height: 96rpx;
+  font-size: 28rpx;
+  /* line-height: 96rpx; */
+  flex-direction: row;
+  align-items: center;
+}
+
+/*左侧栏list的item被选中时*/
+.nav_left .nav_left_items.active {
+  color: #ed1000;
+}
+
+/*右侧栏主盒子*/
+.scroll_right {
+  /*右侧盒子使用了绝对定位*/
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: auto;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 75%;
+  height: 100%;
+  padding: 0 20rpx 0rpx 24rpx;
+  box-sizing: border-box;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.mink::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.minl {
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 4rpx solid #999;
+  border-radius: 2rpx;
+  padding-bottom: 8rpx;
+}
+
+.middle-title {
+  height: 56rpx;
+  text-align: center;
+}
+
+.mink {
+  width: 100%;
+  background: #fff;
+  height: 100%;
+  margin-top: 40rpx;
+  margin-bottom: 24rpx;
+  /* border: 1rpx solid #dedede; */
+}
+
+/*右侧栏list的item*/
+.nav_right_items {
+  /*浮动向左*/
+  float: left;
+  /*每个item设置宽度是33.33%*/
+  width: 50%;
+  /* height: 160rpx;  */
+  text-align: center;
+  color: #ed1000;
+}
+
+.nav_right_items image {
+  /*被图片设置宽高*/
+  width: 60px;
+  height: 50px;
+  margin-top: 15rpx;
+}
+
+.nav_right_items text {
+  /*给text设成块级元素*/
+  display: block;
+  margin-top: 5rpx;
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+  /*设置文字溢出部分为...*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+  background: #dedede;
+}
+
+.scroll_left {
+  width: 162rpx;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0
+}
+
+.view-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-items-item-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rpx;
+  margin-left: 16rpx;
+  min-width: 120rpx;
+  height: 52rpx;
+  background: #f5f5f5;
+  border-radius: 26rpx;
+  font-size: 24rpx;
+  color: #999;
+  box-sizing: border-box;
+  padding: 10rpx 36rpx 8rpx 36rpx;
+}
+
+.kind-btn {
+  bottom: 40rpx;
+  right: 40rpx;
+  position: fixed;
+}
+
+.kind-btn button {
+  height: 80rpx;
+  border-radius: 10rpx;
+  width: 484rpx !important;
+}
+
+
+.kind-btn .ok {
+  color: #fff;
+  margin-left: 16rpx;
+  background: #FD4C72;
+}
+
+.kind-children {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 28rpx;
+  font-weight: bold;
+}
+
+.kind-children .active {
+  color: #FD4C72;
+  background: #FFD7E0;
+  border: 2rpx solid #FD4C72;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

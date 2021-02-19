@@ -1,0 +1,33 @@
+/* pages/shop/list/index.wxss */
+
+@import '/templates/list/serch/serch-bar-templates.wxss';
+@import '/templates/list/type/type-select-templates.wxss';
+@import '/templates/list/goods/good-list-templates.wxss';
+@import '/templates/list/pop/type-choose-templates.wxss';
+
+
+page{
+  height: 100%;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+
+.list-type{
+  left: 0;
+  right: 0;
+  height: 60rpx;
+  z-index: 2;
+  display: flex;
+  position: fixed;
+
+}
+
+.type-vertical{
+  width: 2rpx;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

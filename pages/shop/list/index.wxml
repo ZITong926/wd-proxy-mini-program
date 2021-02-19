@@ -1,0 +1,35 @@
+<!--pages/shop/list/index.wxml-->
+
+<import src="/templates/list/serch/serch-bar-templates.wxml" />
+<import src="/templates/list/type/type-select-templates.wxml" />
+<import src="/templates/list/goods/good-list-templates.wxml" />
+<import src="/templates/list/pop/type-choose-templates.wxml" />
+
+
+<navigation 
+	title="商品列表" 
+	searchBar="true" 
+	show_left="{{true}}" 
+	keyword="{{keyword}}" 
+	headerHeight="{{90}}"
+	bind:search="searchList"
+	placeholder="请输入商品名称"
+	bind:keywordChange="keywordChange"
+/>
+
+<view class="list-page">
+
+	<view class="list-type" style="top: {{2*(statusBarHeight + 90)}}rpx">
+
+		<template is="typeSelectTemplate" data="{{categoryObj, vendorId, id: categoryId, name: 'category', text: '请选择分类', src: '/images/list/type-back.png', src_active: '/images/list/type.png'}}" />
+
+		<view class="type-vertical" />
+
+		<template is="typeSelectTemplate" data="{{ brandObj, vendorId, id: brandId, name: 'brand', text: '请选择品牌', src: '/images/list/brand-back.png', src_active: '/images/list/brand.png'}}" />
+	</view>
+
+	<template is="goodsListTemplate" data="{{list, statusBarHeight, deviceH }}" />
+
+	<template is="typeChooseTemplate" data="{{ specIds, count, status, mask, specsName, currentOrderDetail, confirm_btn }}" />
+
+</view>

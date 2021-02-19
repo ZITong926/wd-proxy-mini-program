@@ -1,0 +1,16 @@
+.list-page-search {
+  height: 84rpx;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  position: fixed;
+  background-image: linear-gradient(#FF83AB, #FF83AB);
+}
+
+.list-page-search-input {
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  height: 60rpx !important;
+  margin: 0 40rpx 24rpx 40rpx;
+}

@@ -1,0 +1,31 @@
+<import src="/templates/list/kind/cart-select-templates.wxml" />
+
+<template name="typeChooseTemplate">
+
+	<view class="pop-page">
+
+		<view class="mask" bindtap="close" wx:if="{{mask}}"></view>
+		<view class='pop_box {{status == true ? "animate" : ""}}'>
+			<view class="pop-goods-icon">
+				<image class="goods-icon" src="{{detail.image}}" />
+
+				<image class="goods-close" src="/images/list/close.png" bindtap="close" />
+
+				<view class="pop-goods-content">
+					<text class="pop-goods-scoll">{{detail.proxyPrice}}积分</text>
+					<text class="pop-goods-type">已选择: {{specsName}}</text>
+				</view>
+
+			</view>
+
+      <scroll-view scroll-y="true" style="height: 454rpx">
+			  <template is="typingTemplate" data="{{ properties: detail.properties, specIds }}" />
+      </scroll-view>
+
+      <view class="pop-btn">
+				<button class="pop-confirm {{ confirm_btn ? 'dis-btn': '' }}" bind:tap="confimAction">确定</button>
+      </view>
+
+		</view>
+	</view>
+</template>

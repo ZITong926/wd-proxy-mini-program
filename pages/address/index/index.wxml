@@ -1,0 +1,95 @@
+<!--pages/address/index/index.wxml-->
+<navigation title='填写地址' show_left='true' />
+
+<view class="address-view">
+
+	<view class="address-view-wrapper">
+
+		<view class="name-tel">
+			<view class="name-view">
+				<text wx:if="{{ name }}">姓名</text>
+				<view>
+					<input
+						class="name" 
+						data-name="name" 
+						placeholder="姓名" 
+						value="{{ name }}"
+						bindinput="changeInput" 
+						placeholder-class="name-placeholder"
+					/>
+					<image bind:tap="delValue" data-name="name"  wx:if="{{ name }}" src="/images/list/del.png" />
+				</view>
+			</view>
+			<view class="tel-view">
+				<text wx:if="{{ phone }}">电话</text>
+				<view>
+					<input 
+						class="tel" 
+						data-name="phone" 
+						placeholder="电话"
+						value="{{ phone }}"
+						bindinput="changeInput" 
+						placeholder-class="tel-placeholder"
+					/>
+					<image bind:tap="delValue" data-name="phone"  wx:if="{{phone}}" src="/images/list/del.png" />
+				</view>
+			</view>
+		</view>
+
+		<view class="city-area" bindtap="openArea">
+			<input
+				disabled="true"
+				value="{{ address }}"
+				bindtap="hideKeyBoard"
+				placeholder="省份 / 城市 / 区域"
+				placeholder-class="city-placeholder" 
+			/>
+			<image src="/images/list/arrow-down.png" />
+		</view>
+
+		<view class="detail-address">
+			<text wx:if="{{ detail_address }}">详细地址</text>
+			<view>
+				<textarea
+					placeholder="详细地址"
+					bindinput="changeInput" 
+					data-name="detail_address"
+					value="{{ detail_address }}"
+					placeholder-class="detail-placeholder" 
+					style="margin-top: {{ detail_address ? 0 : 12 }}rpx"
+				/>
+				<image bind:tap="delValue" data-name="detail_address"  wx:if="{{ detail_address }}" src="/images/list/del.png" />
+			</view>
+		</view>
+
+		<view class="smart-write">
+			<textarea
+				data-name="smartValue"
+				bindinput="changeInput" 
+				value="{{ smartValue }}"
+				placeholder-style="smart-promot" 
+				placeholder="粘贴如“浙江省杭州市余杭区杭州大厦1100室 贾毛毛 18088889999"
+			/>
+		</view>
+
+		<view class="smart-action">
+			<text bind:tap="delValue" data-name="smartValue">清空</text>
+			<button bind:tap="smartWrite">智能填写</button>
+		</view>
+
+	</view>
+
+	<view class="address-confirm" >
+		<button style="background: {{ confirm ? '#FD4C72': '#FEA3B7' }}" bind:tap="addAddress">确认</button>
+	</view>
+
+	<addr-select
+    show="{{showArea}}"
+    bind:close="closeArea"
+		addrList="{{addrList}}"
+    bind:select="selectArea"
+		addrSelect="{{addrSelect}}"
+		bind:loadingAddress="loadingAddress"
+  />
+
+</view>

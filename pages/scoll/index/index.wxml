@@ -1,0 +1,14 @@
+<!--pages/scoll/index/index.wxml-->
+
+<import src="/templates/scoll/item/scoll-item-templates.wxml" />
+<import src="/templates/scoll/head/head-scoll-templates.wxml.wxml" />
+
+<navigation title='积分对账' show_left='{{true}}' />
+
+<view class="scoll-page">
+
+  <template is="headScollTemplate" data="{{ scollObj, statusBarHeight }}" />
+
+  <template is="scollItemTemplate" data="{{ scollList, deviceH, statusBarHeight, status }}" />
+
+</view>

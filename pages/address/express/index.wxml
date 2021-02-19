@@ -1,0 +1,75 @@
+<!--pages/address/express/index.wxml-->
+<navigation title='物流查询' show_left='true' />
+
+<view class="express-search">
+
+	<view class="bag-list">
+
+		<view class="bag-name">
+
+			<image src="/images/tab/cart.png" />
+
+			<text>包裹</text>
+
+			<text wx:if="{{size > 1}}">{{currentTab+1}}/{{size}}</text>
+
+		</view>
+
+
+		<view class="bag-view">
+
+			<view data-name="left" bind:tap="changeOrder" class="bag-view-left" wx:if="{{size >= currentTab + 1 && currentTab + 1 != 1}}">
+				<image src="/images/express/arrow-left.png" />
+			</view>
+
+			<view class="bag-icon">
+
+				<view class="bag-list-page" wx:for="{{ list[currentTab].orderProductItemList}}" wx:key="productId">
+					<image src="{{item.productImage}}" />
+				</view>
+
+			</view>
+
+			<view data-name="right" bind:tap="changeOrder" class="bag-view-right" wx:if="{{ currentTab + 1 < size && size > 1}}">
+				<image src="/images/express/arrow-right.png" />
+			</view>
+
+		</view>
+
+		<view class="total-bag">共{{total}}件商品</view>
+
+
+	</view>
+
+
+	<!-- 物流信息 -->
+	<view class="kuaidi_follow">
+
+		<view class='xbq-express'>
+			<text class='xbqsf'>{{list[currentTab].expressProviderName}}：{{list[currentTab].expressNo}}</text>
+			<button class="copy" bind:tap="copyTBL">复制</button>
+		</view>
+
+		<view class="follow_satus">
+
+			<view class="follow_address" wx:for="{{list[currentTab].traceInfoList}}" wx:key="time" wx:for-item="items">
+				<view wx:if="{{ index == 0}}">
+					<view class="label default">
+						<image src="/images/express/express.png" />
+					</view>
+					<!-- <view class="status">派件中</view> -->
+					<view class="address default">{{items.info}}</view>
+					<view class="date">{{items.time}}</view>
+				</view>
+
+				<view class="follow_address" wx:else>
+					<view class="label"></view>
+					<view class="address">{{items.info}}</view>
+					<view class="date">{{items.time}}</view>
+				</view>
+			</view>
+
+		</view>
+	</view>	
+
+</view>

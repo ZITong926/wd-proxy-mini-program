@@ -1,0 +1,28 @@
+<!--templates/scoll/head/head-scoll-templates.wxml.wxml-->
+
+<template name="headScollTemplate">
+
+	<view class="head-scoll">
+		<view class="head-left">
+			<text class="up">剩余积分</text>
+			<text class="down">{{scollObj.scoreBalance}}</text>
+		</view>
+
+		<view class="scoll-vertical" />
+
+		<view class="head-right">
+			<view class="head-up">
+				<text class="title">总充值积分</text>
+				<text class="scoll">{{scollObj.totalRecharge}}</text>
+			</view>
+
+      <view class="scoll-horizontal" />
+
+			<view class="head-down">
+				<text class="title">总消费积分</text>
+				<text class="scoll">{{scollObj.totalSpend}}</text>
+			</view>
+		</view>
+
+	</view>
+</template>

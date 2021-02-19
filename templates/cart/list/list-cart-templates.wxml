@@ -1,0 +1,84 @@
+<!--templates/cart/list/list-cart-templates.wxml-->
+<template name="cartListTemplate">
+
+
+	<view class="cart-shop-list" wx:for="{{items}}" wx:key="vendorId" wx:for-item="list" wx:for-index="idx">
+
+		<view class="cart-shop-list-view">
+
+			<view class="list-shop-title">
+				<checkbox 
+					class="all-check" 
+					catch:tap="checkAll"
+					data-index="{{idx}}" 
+					checked="{{list.check ? list.check : false}}"
+				/>
+				<image class="icon-shop" src="{{list.vendorAvatar}}" />
+				<text class="shop-name">{{list.vendorName}}</text>
+			</view>
+
+			<view 
+				wx:key="id"
+				data-idx="{{idx}}"
+				wx:for-item="item"
+				wx:for-index="index"
+				data-index="{{index}}" 
+				bindtouchmove="touchmove"
+				bindtouchstart="touchstart" 
+				wx:for="{{list.shoppingCartProductDtos}}" 
+				class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+			>
+				<view class="shop-real-list">
+					<checkbox
+						data-idx="{{idx}}"
+						data-index="{{index}}"
+						class="all-list-check"
+						catch:tap="checkSingle"
+						checked="{{item.check ? item.check : false}}"
+					/>
+					<image class="shop-icon" src="{{item.productImage}}" />
+
+					<view class="shop-icon-name">
+						<text class="s-title">{{item.productName}}</text>
+						<view class="des">
+							<text 
+								data-idx="{{idx}}"
+								data-index="{{index}}"
+								class="shop-description" 
+								catch:tap="chooseProperty"
+								data-vendorId="{{list.vendorId}}"
+							>{{item.specsName}}</text>
+							<!-- <text class="img" /> -->
+						</view>
+						<view class="shop-list-scoll">
+							<text class="scoll-shop-css">{{item.productPrice}}</text>
+							<text class="cart-company">积分</text>
+							<view class="scoll-shop-num">
+								<button 
+									class="reduce" 
+									data-idx="{{idx}}" 
+									data-name="reduce" 
+									data-index="{{index}}" 
+									catch:tap="changeNum"
+								>-</button>
+								<text class="count">{{item.count}}</text>
+								<button 
+									class="plus"
+									data-name="plus" 
+									data-idx="{{idx}}" 
+									data-index="{{index}}"
+									catch:tap="changeNum"
+								>+</button>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class='touchdel' data-idx="{{idx}}" data-id="{{item.id}}" bind:tap="delCartOrder">
+					删除
+				</view>
+			</view>
+
+		</view>
+
+</view>
+</template>

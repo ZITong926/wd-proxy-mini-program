@@ -1,0 +1,22 @@
+<!--templates/list/cart/add-cart-templates.wxml-->
+
+<template name="addCartTemplate">
+
+	<view class="add-cart">
+
+		<view class="cart-goods-num">
+			<text class="goods-numbers">数量</text>
+
+			<view class="cart-goods-btn">
+				<button data-name="remove" bind:tap="changeNum">-</button>
+				<view class="cart-horizontal" />
+				<text class="cart-goods-text">{{count}}</text>
+				<view class="cart-horizontal" />
+				<button data-name="add" bind:tap="changeNum">+</button>
+			</view>
+
+		</view>
+
+	</view>
+
+</template>

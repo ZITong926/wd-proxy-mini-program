@@ -1,0 +1,40 @@
+<!--templates/cart/address/address-item-templates.wxml-->
+<template name="addressItemTemplate">
+
+	<view class="address-item">
+
+		<view wx:if="{{add_address}}" class="no-address-item" bindtap="addOrEditAddress">
+			<image class="address-icon-left" src="/images/list/address.png" />
+			<text class="address-title">请填写地址</text>
+			<image class="address-icon-right" src="/images/mine/arrow.png" />
+		</view>
+
+		<view wx:else class="has-address-item" bindtap="addOrEditAddress">
+			<image class="address-icon-left" src="/images/list/address.png" />
+
+			<view class="address-info" wx:if="{{order_detail}}">
+				<view class="name-tel">
+					<text class="name">{{addressInfo.receiverName}}</text>
+					<text class="tel">{{addressInfo.receiverPhone}}</text>
+				</view>
+				<view class="real-address">
+					{{addressInfo.receiverAddress}}
+				</view>
+			</view>
+
+			<view class="address-info" wx:else>
+				<view class="name-tel">
+					<text class="name">{{addressInfo.name}}</text>
+					<text class="tel">{{addressInfo.phone}}</text>
+				</view>
+				<view class="real-address">
+					{{addressInfo.provinceName}}{{addressInfo.cityName}}{{addressInfo.areaName}}{{addressInfo.address}}
+				</view>
+			</view>
+
+			<image wx:if="{{ icon }}" class="address-icon-right" src="/images/mine/arrow.png" />
+		</view>
+
+	</view>
+
+</template>

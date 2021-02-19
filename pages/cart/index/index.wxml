@@ -1,0 +1,21 @@
+<!--pages/cart/index/index.wxml-->
+
+<import src="/templates/more/more-item-templates.wxml" />
+<import src="/templates/cart/pop/pop-cart-templates.wxml" />
+<import src="/templates/cart/list/list-cart-templates.wxml" />
+<import src="/templates/cart/total/total-item-templates.wxml" />
+
+<navigation title='购物车' show_left='{{false}}' small_title="共{{num}}件商品" />
+<view style="height: {{ (deviceH - statusBarHeight - 68 - 60)*2}}rpx; overflow-y: scroll">
+
+	<view class="cart-list">
+		<template is="cartListTemplate" data="{{ items }}" />
+
+		<template is="totalItemTemplate" data="{{ count, scoll }}" />
+
+	</view>
+	<template is="typeChooseTemplate" data="{{ specIds, status, mask, detail, confirm_btn, specsName }}" />
+
+	<template is="moreItemTemplate" data="{{ isLogin }}" />
+	
+</view>

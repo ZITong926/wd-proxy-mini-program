@@ -1,0 +1,15 @@
+/* pages/order/detail/index.wxss */
+@import '/templates/cart/order/order-item-templates.wxss';
+@import '/templates/cart/post/post-address-templates.wxss';
+@import '/templates/order/total/total-order-templates.wxss';
+@import '/templates/cart/address/address-item-templates.wxss';
+
+page{
+  height: 100%;
+  background: #f5f5f5;
+}
+
+
+.order-details{
+  padding-bottom: 168rpx;
+}

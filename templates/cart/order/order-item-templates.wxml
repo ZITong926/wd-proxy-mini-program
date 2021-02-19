@@ -1,0 +1,104 @@
+<!--templates/cart/order/order-item-templates.wxml-->
+
+<template name="cartOrderTemplate">
+
+	<view class="cart-order-list" style="padding-bottom: {{ remark ? 0: 20 }}rpx">
+
+		<view class="cart-order-list-view">
+
+			<view class="div-order-no" wx:if="{{order_detail}}">
+				<view class="div-order">
+					<text class="div-order-one">订单编号:</text>
+					<text class="div-order-two">{{list.orderNo}}</text>
+					<button data-id="{{list.orderNo}}" catchtap="copyOrder">复制</button>
+				</view>
+			</view>
+
+			<view class="list-order-title" wx:if="{{order_detail || name =='cart'}}">
+				<view class="cart-order-check" />
+				<image class="icon-order" src="{{list.vendorAvatar}}" />
+				<text class="order-name">{{list.vendorName}}</text>
+			</view>
+
+			<view class="list-order-title" wx:else>
+				<view class="cart-order-check" />
+				<image class="icon-order" src="{{shop.vendorAvatar}}" />
+				<text class="order-name">{{shop.vendorNickName}}</text>
+			</view>
+
+			<view wx:if="{{ show }}" class="order-reallist">
+				<image class="order-icon" src="{{list.data.image}}" />
+
+				<view class="order-icon-name">
+					<text class="s-title">{{list.data.name}}</text>
+					<view>
+						<text class="order-description">{{specName}}</text>
+					</view>
+
+					<view class="cart-order-scoll-ok">
+						<view class="scoll-title">
+							<text class="scoll">{{list.data.proxyPrice}}</text>
+							<text class="title">积分</text>
+						</view>
+						<text class="num">x{{list.count}}</text>
+					</view>
+				</view>
+			</view>
+
+
+			<view wx:else>
+				<view wx:if="{{ name == 'cart' }}">
+					<view data-index="{{ index }}" wx:for="{{ list.shoppingCartProductDtos }}" class="touch-item" wx:key="id">
+						<view class="order-real-list" wx:if="{{item.check}}">
+							<image class="order-icon" src="{{item.productImage}}" />
+
+							<view class="order-icon-name">
+								<text class="s-title">{{item.productName}}</text>
+								<view>
+									<text class="order-description">{{item.specsName}}</text>
+								</view>
+
+								<view class="cart-order-scoll-ok">
+									<view class="scoll-title">
+										<text class="scoll">{{item.productPrice}}</text>
+										<text class="title">积分</text>
+									</view>
+									<text class="num">x{{item.count}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view wx:else>
+					<view data-index="{{ index }}" wx:for="{{ list.items }}" class="touch-item" wx:key="id">
+						<view class="order-real-list">
+							<image class="order-icon" src="{{item.productImage}}" />
+
+							<view class="order-icon-name">
+								<text class="s-title">{{item.productName}}</text>
+								<view>
+									<text class="order-description">{{item.specName}}</text>
+								</view>
+
+								<view class="cart-order-scoll-ok">
+									<view class="scoll-title">
+										<text class="scoll">{{item.proxyPrice}}</text>
+										<text class="title">积分</text>
+									</view>
+									<text class="num">x{{item.count}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="cart-order-remark" wx:if="{{remarkVisible}}">
+				<text class="remark">订单备注</text>
+				<input value="{{remark}}" class="remark-contack" placeholder="选填，请先和商家协商一致" />
+			</view>
+
+		</view>
+
+	</view>
+</template>

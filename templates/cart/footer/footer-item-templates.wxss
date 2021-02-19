@@ -1,0 +1,74 @@
+/* templates/cart/footer/footer-item-templates.wxss */
+
+.add-order-footer {
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  border: 2rpx solid #eee;
+}
+
+.add-order-footer .footer-panel-view {
+  float: right;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+
+.add-order-footer .footer-panel-view .total-shop-footer {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  line-height: 34rpx;
+}
+
+.add-order-footer .footer-panel-view .footer-num {
+  width: 84rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 40rpx;
+}
+
+.add-order-footer .footer-panel-view .footer-scoll {
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FD4C72;
+}
+
+.add-order-footer .footer-panel-view .footer-scoll .footer-count {
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+
+.add-order-footer .footer-panel-view .footer-scoll .footer-company {
+  height: 28rpx;
+  padding-left: 4rpx;
+  font-size: 20rpx;
+  line-height: 28rpx;
+}
+
+.add-order-footer .footer-panel-view .footer-btn {
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background: #FD4C72;
+  border-radius: 40rpx;
+  padding: 0 !important;
+  font-size: 28rpx;
+  font-weight: 400;
+  margin: 0 20rpx;
+  display: inline-block;
+  font-family: PingFangSC-Regular, PingFang SC;
+}

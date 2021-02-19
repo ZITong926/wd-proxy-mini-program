@@ -1,0 +1,102 @@
+/* pages/login/index/index.wxss */
+page {
+  height: 100%;
+  background-color: #fff;
+}
+
+.login-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page .icon {
+  width: 252rpx;
+  height: 252rpx;
+  margin-top: 200rpx;
+}
+
+.login-page .icon-title {
+  display: block;
+  width: 181px;
+  color: #999;
+  font-size: 32rpx;
+  font-weight: 400;
+  margin-top: 20rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.phone-number {
+  margin-top: 80rpx;
+}
+
+.phone-number .phone-number-view {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.phone-number .phone-number-view .icon-p {
+  width: 50rpx;
+  height: 72rpx;
+  margin-top: 4rpx;
+}
+
+.phone-number .phone-number-view .pre-num {
+  width: 84rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  background: #ccc;
+  text-align: center;
+  line-height: 80rpx;
+  display: block;
+  margin-left: 16rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.phone-number .phone-number-view .tel {
+  width: 504rpx;
+  height: 80rpx;
+  padding-left: 48rpx;
+  background: #f5f5f5;
+}
+
+.phone-number .phone-number-view .p-place {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.login-page .pre-btn {
+  height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 28rpx;
+  border-radius: 10rpx;
+  width: 670rpx !important;
+}
+
+.login-page .layer {
+  text-align: center;
+  margin-top: 16rpx;
+  display: block;
+  font-weight: 400;
+  height: 34rpx;
+  line-break: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.login-page .layer .bind-phone {
+  width: 384rpx;
+  color: #B7B7B7;
+
+}
+
+.login-page .layer .private {
+  width: 264px;
+  color: #979797;
+}

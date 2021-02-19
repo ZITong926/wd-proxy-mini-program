@@ -1,0 +1,57 @@
+<!--pages/shop/agent/index.wxml-->
+<navigation 
+	show_left="true"
+	searchBar="true"
+	title="代理商品管理"
+	keyword="{{keyword}}"
+	headerHeight="{{90}}"
+	bind:search="searchList"
+	placeholder="请输入商品名称"
+	bind:keywordChange="keywordChange"
+/>
+
+<view class="proxy-shop" style="height: {{ 2 *(deviceH - statusBarHeight - 90)}}rpx" >
+
+		<!-- 左侧列表内容部分 -->
+		<scroll-view 
+			scroll-y="true" 
+			class="contentList" 
+			enable-back-to-top 
+			bindscroll="onPageScroll"
+			scroll-with-animation="true" 
+			scroll-into-view="{{toView}}"
+			style="height: {{ 2 *(deviceH - statusBarHeight - 90)}}rpx" 
+		>
+			<view 
+				wx:key="alpha"
+				wx:for="{{list}}" 
+				wx:for-item="group" 
+				id="inTo{{group.alpha}}" 
+				data-id="{{group.alpha}}"
+			>
+				<view class="address_top">{{group.alpha}}</view>
+				<view wx:for="{{group.items}}" wx:for-item="item" wx:key="id" data-id="{{item.id}}"  bind:tap="chooseItem">
+					<view class="address_bottom" data-id='{{item.id}}'>
+						<text class="proxy-title">{{item.cnName}}</text>
+						<text class="proxy-country">{{item.info}}</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+
+		<!-- 顶部固定分类 -->
+		<view class="list-fixed {{fixedTitle==null ? 'hide':''}}" style="transform:translate3d(0,{{fixedTop}}px,0);">
+			<view class="fixed-title"> {{fixedTitle}} </view>
+		</view>
+
+		<!-- 右侧字母导航 -->
+		<view class="orientation_region" style="height: {{ 2 *(deviceH - statusBarHeight - 90)}}rpx" >
+			<block wx:for="{{list}}" wx:key="alpha">
+				<view class="orientation_city {{isActive==item.alpha ? 'active':'' }}" bindtap="scrollToViewFn" data-id="{{item.alpha}}">
+					{{item.alpha}}
+				</view>
+			</block>
+			<view class="orientation">#</view>
+		</view>
+
+</view>

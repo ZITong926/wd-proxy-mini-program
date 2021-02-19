@@ -1,0 +1,23 @@
+<!--templates/list/detail/detail-head-template.wxml-->
+
+<template name="detailTemplate">
+
+  <view class="detail-head">
+
+    <image class="icon" src="{{data.image}}" />
+
+    <view class="detail-content">
+
+      <text class="title">{{data.name}}</text>
+
+      <text class="scoll">{{data.proxyPrice}}积分</text>
+
+      <view class="type">
+        <text class="titles">已选择: </text>
+        <text class="kinds">{{specsName}}</text>
+      </view>
+    </view>
+  
+  </view>
+
+</template>

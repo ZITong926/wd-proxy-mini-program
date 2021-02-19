@@ -1,0 +1,56 @@
+/* templates/list/detail/detail-head-template.wxss */
+
+.detail-head {
+  width: 100%;
+  height: 258rpx;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.detail-head .icon {
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 40rpx;
+}
+
+.detail-content {
+  margin-left: 20rpx;
+}
+
+.detail-content .title {
+  width: 470rpx;
+  height: 80rpx;
+  display: block;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #333;
+  line-height: 40rpx;
+  flex-wrap: wrap;
+}
+
+.detail-content .scoll {
+  margin-top: 8rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  color: #FD4C72;
+  line-height: 40rpx;
+}
+
+.detail-content .type {
+  margin-top: 4rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999;
+  line-height: 34rpx;
+}
+
+.detail-content .titles {
+  padding-right: 10rpx;
+}

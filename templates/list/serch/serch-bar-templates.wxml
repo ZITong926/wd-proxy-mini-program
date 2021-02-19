@@ -1,0 +1,5 @@
+<template name="searchBarTemplate">
+	<view class="list-page-search" style="top: {{ (statusBarHeight + 50)*2 }}rpx">
+		<input value="{{keyword}}" confirm-type="search" placeholder="{{ placeholder }}" class="list-page-search-input" placeholder-class="search-input-icon" bindinput="inputOnchange" />
+	</view>
+</template>

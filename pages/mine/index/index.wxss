@@ -1,0 +1,75 @@
+/* pages/mine/index/index.wxss */
+
+@import '/templates/more/more-item-templates.wxss';
+
+page {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.mine-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mine-page-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.mine-page-icon .mine-icon {
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 60rpx;
+}
+
+.mine-page-icon .mine-text {
+  height: 44rpx;
+  color: #333;
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+  line-break: 44rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.mine-page .mine-page-item {
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  margin-top: 60rpx;
+  background: #fff;
+  align-items: center;
+  position: relative;
+}
+
+.mine-page .mine-page-item .mine-service {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}
+
+.mine-page .mine-page-item .mine-text {
+  width: 112rpx;
+  height: 40rpx;
+  color: #333;
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+
+.mine-page .mine-page-item .mine-arrow {
+  width: 16rpx;
+  height: 24rpx;
+  right: 48rpx;
+  top: 32rpx;
+  position: absolute;
+}

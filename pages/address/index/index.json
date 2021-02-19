@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "addr-select": "/components/addr-select/index",
+    "dialog-modal": "/components/dialog-modal/index"
+  }
+}

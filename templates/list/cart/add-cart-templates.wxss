@@ -1,0 +1,53 @@
+/* templates/list/cart/add-cart-templates.wxss */
+.cart-goods-num {
+  height: 226rpx;
+  position: relative;
+  background: #fff;
+}
+
+.goods-numbers {
+  display: inline-block;
+  width: 48rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #979797;
+  line-height: 34rpx;
+}
+
+.cart-goods-btn {
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  top: 26rpx;
+  right: 40rpx;
+  display: flex;
+  position: absolute;
+  border-radius: 10rpx;
+  border: 2rpx solid #b7b7b7;
+}
+
+.cart-goods-btn button {
+  line-height: 40rpx;
+  text-align: center;
+  width: 46rpx !important;
+  padding: 0 !important;
+}
+
+.cart-goods-text {
+  width: 42px;
+  font-size: 12px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+}
+
+.cart-horizontal {
+  width: 1px;
+  height: 20px;
+  background-color: #b7b7b7;
+}

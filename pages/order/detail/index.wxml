@@ -1,0 +1,20 @@
+<!--pages/order/detail/index.wxml-->
+
+<import src="/templates/cart/order/order-item-templates.wxml" />
+<import src="/templates/cart/post/post-address-templates.wxml" />
+<import src="/templates/order/total/total-order-templates.wxml" />
+<import src="/templates/cart/address/address-item-templates.wxml" />
+
+<navigation title='订单详情' show_left='{{true}}' small_title="{{small_title}}" />
+
+<view class="order-details">
+
+  <template is="postAddressTemplate" wx:if="{{ list.status == 3 }}" data="{{ list }}" />
+
+	<template is="addressItemTemplate" data="{{ addressInfo: list, order_detail: true, icon: false }}" />
+
+  <template is="cartOrderTemplate" data="{{ list, remarkVisible: false, order_detail: true }}" />
+
+  <template is="detailTotalTemplate" data="{{ list, count }}" />
+
+</view>

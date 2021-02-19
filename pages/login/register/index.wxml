@@ -1,0 +1,30 @@
+<!--pages/login/register/index.wxml-->
+
+<view class="register-page">
+
+	<image bindtap="goBack" class="re-back" src="/images/list/back-login.png" />
+
+
+	<view class="register-content">
+		<text class="input-code">输入验证码</text>
+		<text class="show-phone">验证码已发送致: 135****9540</text>
+		<text class="time" style=" display: {{ is_show ? 'block': 'none' }} ">{{time}}s后</text>
+		<button bindtap="reClickVerify" class="re-send" 
+		style="background: {{ is_show ? '#FEA3B7': '#FD4C72' }}">重新发送</button>
+	</view>
+
+	<view class="register-verify">
+
+		<view class='content'>
+
+			<block wx:for="{{ length }}" wx:key="item">
+				<input bindconfirm="loginInVerifCode" disabled catchtap='Tap' class='iptbox' value="{{ value.length >= index+1 ? value[index] : '' }}" />
+			</block>
+
+		</view>
+
+		<input class='ipt' maxlength="{{length}}" focus="{{isFocus}}" bindinput="Focus" bindconfirm="loginInVerifCode" />
+
+	</view>
+
+</view>

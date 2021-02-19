@@ -1,0 +1,25 @@
+<!--templates/scoll/item/scoll-item-templates.wxml-->
+
+<template name="scollItemTemplate">
+
+	<scroll-view 
+		scroll-y="true" 
+		class="scoll-item" 
+		bindscrolltoupper="onRefreshTo"
+		bindscrolltolower="onReachBottom" 
+		style="height: {{ 2*(deviceH - (statusBarHeight + 50 + 107 + 2)) }}rpx"
+	>
+		<view class="scoll-item-view" wx:for="{{scollList}}" wx:key="id">
+			<view class="scoll-item-left">
+				<text class="up">{{item.remark}}</text>
+				<text class="down">{{item.createTime}}</text>
+			</view>
+
+			<view class="scoll-item-right">
+				<text class="up">{{item.score}}</text>
+				<text class="down">{{status[item.origin]}}</text>
+			</view>
+		</view>
+	</scroll-view>
+
+</template>

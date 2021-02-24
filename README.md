@@ -21,7 +21,7 @@
 #### 效果图如下
 <br/>
 
-![验证码](./img/验证码.png)
+![验证码](./img/verify-code.png)
 ![登录](./img/登录.png)
 ![商品](./img/商品.png)
 ![分类](./img/分类.png)

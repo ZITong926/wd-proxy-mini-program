@@ -20,17 +20,17 @@
 
 #### 效果图如下
 <br/>
-
-![验证码](./img/验证码.png)
-![登录](./img/登录.png)
-![商品](./img/商品.png)
-![分类](./img/分类.png)
-![品牌分类](./img/品牌分类.png)
-![订单](./img/订单.png)
-![加入购物车](./img/加入购物车.png)
-![地址](./img/地址.png)
-![物流](./img/物流.png)
-![购物车](./img/购物车.png)
-![我的](./img/我的.png)
-![积分](./img/积分.png)
-![首页](./img/首页.png)
+<img src="./img/绑定.png" width="370" heght="667" />
+<img src="./img/验证码.png" width="370" heght="667" />
+<img src="./img/首页.png" width="370" heght="667" />
+<img src="./img/订单-确认订单.png" width="370" heght="667" />
+<img src="./img/商品详情.png" width="370" heght="667" />
+<img src="./img/商品列表.png" width="370" heght="667" />
+<img src="./img/品牌列表.png" width="370" heght="667" />
+<img src="./img/购物车-全选.png" width="370" heght="667" />
+<img src="./img/订单-已发货.png" width="370" heght="667" />
+<img src="./img/编辑地址.png" width="370" heght="667" />
+<img src="./img/编辑地址-重新进入弹窗.png" width="370" heght="667" />
+<img src="./img/积分对账.png" width="370" heght="667" />
+<img src="./img/物流查询.png" width="370" heght="667" />
+<img src="./img/我的.png" width="370" heght="667" />

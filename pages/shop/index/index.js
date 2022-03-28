@@ -150,7 +150,7 @@ Page({
    * 跳转商品列表
    */
   onJumpShopList: function (event) {
-    if (this.data.isLogin) {
+    if (this.data.isLogin || true) {
       const vendorId = event.currentTarget.dataset.vendorid
       const data = this.data.list.find(t => t.vendorId == vendorId)
       if (data) {
